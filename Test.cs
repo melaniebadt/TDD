@@ -2,7 +2,6 @@ using inConv = Converter.InchCoverter;
 
 public class ConverterTests
 {
-
     public void RunTests()
     {
         double expected = 2.54;

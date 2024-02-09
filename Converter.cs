@@ -6,6 +6,7 @@ namespace Converter
         const double centimeters = 2.54;
         const double millimeters = 25.4;
 
+
         public static double InchesToMeters(double inches)
         {
             return inches * meters;
