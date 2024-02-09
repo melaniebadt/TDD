@@ -1,16 +1,37 @@
-//Test Functions 
-using InchConverter = Converter.InchCoverter;
+using inConv = Converter.InchCoverter;
 
-void Test <T> ( T expected, T actual, string description = "Test")
+public class ConverterTests
 {
-    if ( expected.Equals(actual))
+
+    public void RunTests()
     {
-        Console.WriteLine($"🟢 {description}");  
+
+        double expected = 2.54;
+        Test(expected, inConv.InchesToCentimeters(1));
+
+        expected = 25.4;
+        Test(expected, inConv.InchesToMillimeters(1));
+
+        expected = 0.0254;
+        Test(expected, inConv.InchesToMeters(1));
+
     }
-    else
+
+    void Test(double expected, double actual, string description = "Test")
     {
-        Console.WriteLine($"🔴 {description}, expected {expected}, recieved {actual}");
+
+        if (expected == actual)
+        {
+            Console.WriteLine($"🟢 {description}");
+        }
+        else
+        {
+            Console.WriteLine($"🔴 {description}, expected {expected}, recieved {actual}");
+        }
     }
+
+
 }
+
 
 
