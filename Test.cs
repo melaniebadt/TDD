@@ -1,6 +1,7 @@
-using InchConverter = TDD.InchCoverter;
+//Test Functions 
+using InchConverter = Converter.InchCoverter;
 
-void Test <T> (T expected, T actual, string description = "Test")
+void Test <T> ( T expected, T actual, string description = "Test")
 {
     if ( expected.Equals(actual))
     {
@@ -11,4 +12,5 @@ void Test <T> (T expected, T actual, string description = "Test")
         Console.WriteLine($"🔴 {description}, expected {expected}, recieved {actual}");
     }
 }
+
 
